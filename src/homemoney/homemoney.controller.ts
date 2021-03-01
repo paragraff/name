@@ -6,4 +6,8 @@ export class HomemoneyController {
     getBody(): string {
         return 'this controller will return the homemoney start page'
     }
+    @Get('profile')
+    getProfile(): string {
+        return 'test'
+    }
 }
