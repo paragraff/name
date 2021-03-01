@@ -1,6 +1,6 @@
-import {Controller, Get, Param} from '@nestjs/common';
+import {Controller, Get} from '@nestjs/common';
 
-@Controller('homemoney/accounts/')
+@Controller({host:'homemoney.kovtiukh.name', path:'/accounts/'})
 export class AccountsController {
     @Get()
     getBody(): string {

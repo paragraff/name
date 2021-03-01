@@ -1,6 +1,6 @@
 import {Controller, Get, Param} from '@nestjs/common';
 
-@Controller('homemoney/accounts/:id/')
+@Controller({host: 'homemoney.kovtiukh.name', path: '/accounts/:id/'})
 export class AccountController {
     @Get()
     getBody(@Param('id') id): string {

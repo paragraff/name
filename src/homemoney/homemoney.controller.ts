@@ -1,9 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('homemoney')
+@Controller({host:'homemoney.kovtiukh.name'})
 export class HomemoneyController {
     @Get()
-    getBody(): string {
+    index(): string {
         return 'this controller will return the homemoney start page'
     }
     @Get('profile')
