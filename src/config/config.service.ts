@@ -21,7 +21,7 @@ class ConfigService {
             password: this.envConfig.TYPEORM_PASSWORD,
             database: this.envConfig.TYPEORM_DATABASE,
             port: Number.parseInt(this.envConfig.TYPEORM_PORT, 10),
-            autoLoadEntities: this.envConfig.TYPEORM_MIGRATIONS_RUN === 'true',
+            autoLoadEntities: true,
             logging: false,
         };
     }
