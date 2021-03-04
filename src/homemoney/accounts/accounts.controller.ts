@@ -1,10 +1,10 @@
-import {Body, Controller, Get, Param, ParseIntPipe, Post} from '@nestjs/common';
+import {Controller, Get, Param, ParseIntPipe} from '@nestjs/common';
 import { AccountsService } from './accounts.service';
-import { Account } from './interfaces/account.interface'
-import { CreateAccountDto } from "./dto/account.dto";
+// import { Account } from './interfaces/account.interface'
+// import { CreateAccountDto } from "./dto/account.dto";
 import { Account as AccountEntity} from './accounts.entity'
 
-@Controller({host:'homemoney.kovtiukh.name', path:'/accounts/'})
+@Controller({host: process.env.HOMEMONEY_HOST, path:'/accounts/'})
 export class AccountsController {
     constructor(private accountsService: AccountsService) {}
 

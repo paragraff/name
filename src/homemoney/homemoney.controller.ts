@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller({host:'homemoney.kovtiukh.name'})
+@Controller({host: process.env.HOMEMONEY_HOST})
 export class HomemoneyController {
     @Get()
     index(): string {
